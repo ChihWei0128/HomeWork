@@ -11,8 +11,9 @@ namespace HomeWork.Models.ViewModels
     {
         [Required]
         [Display(Name = "帳號")]
-        [DataType(DataType.EmailAddress)]
-        [RegularExpression(@"\w.+\@\w.+")]
+        //[DataType(DataType.EmailAddress)]
+        //[RegularExpression(@"\w.+\@\w.+")]
+        [Email(ErrorMessage = "帳號必須為Email格式")]
         [NoIs("skilltree,demo,twMVC", ErrorMessage = "帳號內有不可使用的字串[skilltree, demo, twMVC]")]
         public string Account { get; set; }
 
